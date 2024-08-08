@@ -1,0 +1,107 @@
+.
+├── build
+│   ├── CMakeCache.txt
+│   ├── CMakeFiles
+│   │   ├── 3.28.1
+│   │   │   ├── CMakeCCompiler.cmake
+│   │   │   ├── CMakeCXXCompiler.cmake
+│   │   │   ├── CMakeDetermineCompilerABI_C.bin
+│   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+│   │   │   ├── CMakeSystem.cmake
+│   │   │   ├── CompilerIdC
+│   │   │   │   ├── a.out
+│   │   │   │   ├── CMakeCCompilerId.c
+│   │   │   │   └── tmp
+│   │   │   └── CompilerIdCXX
+│   │   │       ├── a.out
+│   │   │       ├── CMakeCXXCompilerId.cpp
+│   │   │       └── tmp
+│   │   ├── cmake.check_cache
+│   │   ├── CMakeConfigureLog.yaml
+│   │   ├── CMakeDirectoryInformation.cmake
+│   │   ├── CMakeRuleHashes.txt
+│   │   ├── Makefile2
+│   │   ├── Makefile.cmake
+│   │   ├── pkgRedirects
+│   │   ├── progress.marks
+│   │   ├── sgemm.dir
+│   │   │   ├── build.make
+│   │   │   ├── cmake_clean.cmake
+│   │   │   ├── compiler_depend.make
+│   │   │   ├── compiler_depend.ts
+│   │   │   ├── DependInfo.cmake
+│   │   │   ├── depend.make
+│   │   │   ├── flags.make
+│   │   │   ├── link.txt
+│   │   │   ├── progress.make
+│   │   │   ├── sgemm_generated_sgemm.cu.o
+│   │   │   ├── sgemm_generated_sgemm.cu.o.cmake
+│   │   │   ├── sgemm_generated_sgemm.cu.o.cmake.pre-gen
+│   │   │   ├── sgemm_generated_sgemm.cu.o.depend
+│   │   │   └── src
+│   │   │       ├── sgemm_generated_utils.cu.o
+│   │   │       ├── sgemm_generated_utils.cu.o.cmake
+│   │   │       ├── sgemm_generated_utils.cu.o.cmake.pre-gen
+│   │   │       └── sgemm_generated_utils.cu.o.depend
+│   │   └── TargetDirectories.txt
+│   ├── cmake_install.cmake
+│   └── Makefile
+├── CMakeLists.txt
+├── images
+│   ├── all_kernels_comparison.png
+│   ├── kernel_5_vs_6.png
+│   ├── kernel_6_vs_7.png
+│   ├── kernel_6_vs_8.png
+│   ├── kernel_7_vs_8.png
+│   ├── kernel_8_vs_10.png
+│   ├── kernel_8_vs_9.png
+│   ├── kernel_9_vs_10.png
+│   ├── kernel_culas_vs_6.png
+│   ├── kernel_culas_vs_7.png
+│   ├── kernel_culas_vs_8.png
+│   └── kernel_culas_vs_9.png
+├── output.txt
+├── plot_all.py
+├── plot.py
+├── README.md
+├── run.sh
+├── scripts
+│   ├── figure.png
+│   ├── kernel_8_autotune_results.txt
+│   ├── kernel_8_autotuner.sh
+│   ├── kernel_8_autotuner_x.sh
+│   ├── kernel_8_autotune_x.txt
+│   ├── kernel_8_plot_x.py
+│   └── sgemm
+├── sgemm
+├── sgemm.cu
+├── src
+│   ├── kernel
+│   │   ├── float124.cu
+│   │   ├── kernel_10.cuh
+│   │   ├── kernel_1.cuh
+│   │   ├── kernel_2.cuh
+│   │   ├── kernel_3.cuh
+│   │   ├── kernel_4.cuh
+│   │   ├── kernel_5.cuh
+│   │   ├── kernel_6.cuh
+│   │   ├── kernel_7.cuh
+│   │   ├── kernel_8.cuh
+│   │   └── kernel_9.cuh
+│   ├── kernel.cuh
+│   ├── utils.cu
+│   └── utils.cuh
+└── test
+    ├── test_kernel_0.txt
+    ├── test_kernel_10.txt
+    ├── test_kernel_1.txt
+    ├── test_kernel_2.txt
+    ├── test_kernel_3.txt
+    ├── test_kernel_4.txt
+    ├── test_kernel_5.txt
+    ├── test_kernel_6.txt
+    ├── test_kernel_7.txt
+    ├── test_kernel_8.txt
+    └── test_kernel_9.txt
+
+15 directories, 89 files

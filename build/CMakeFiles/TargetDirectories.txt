@@ -1,0 +1,3 @@
+/home/ubuntu/yujie/NVIDIA_SGEMM_PRACTICE-master/build/CMakeFiles/sgemm.dir
+/home/ubuntu/yujie/NVIDIA_SGEMM_PRACTICE-master/build/CMakeFiles/edit_cache.dir
+/home/ubuntu/yujie/NVIDIA_SGEMM_PRACTICE-master/build/CMakeFiles/rebuild_cache.dir
