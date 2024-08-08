@@ -64,5 +64,7 @@ NVIDIA_SGEMM_PRACTICE                                   # 根目录
 4. kernel_8 Autotuning脚本运行：
 
 > `./kernel_9_autotuner.sh`表示输出所有合理的参数组合及其性能结果，具体使用方法见文件注释；
+
 > `./kernel_9_autotuner_x.sh`表示输出所有合理的参数组合及 指定的矩阵大小 其性能结果，具体使用方法见文件注释；
+
 > `./kernel_8_autotuner_plot.py`绘制指定的矩阵大小Autotuning结果图，并输出最大性能的参数组合，具体使用方法见文件注释；
