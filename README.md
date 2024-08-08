@@ -3,18 +3,18 @@
 
 面向NVIDIA GPU，使用CUDA编程逐步优化矩阵乘法运算性能：
 
-| Kernel                    | 描述                      
-| 0: cuBLAS                 | 官方库函数                 
-| 1: Naive                  | 朴素实现                   
-| 2: GMEM Coalescing        | 全局内存合并               
-| 3: SMEM Caching           | 共享内存缓存               
-| 4: 1D Blocktiling         | 一维Thread Tile并行优化   
-| 5: 2D Blocktiling         | 二维Thread Tile并行优化    
-| 6: Register cache SMEM    | 使用寄存器缓存共享内存     
-| 7: Vectorized Mem Access  | FLOAT4向量访存            
-| 8: Autotuning             | 自动调整                  
-| 9: Double buffering       | 双缓存                    
-| 10: Warptiling            | warp分块                   
+| Kernel                                         
+| 0: cuBLAS                 ：官方库函数                 
+| 1: Naive                  ：朴素实现                   
+| 2: GMEM Coalescing        ：全局内存合并               
+| 3: SMEM Caching           ：共享内存缓存               
+| 4: 1D Blocktiling         ：一维Thread Tile并行优化   
+| 5: 2D Blocktiling         ：二维Thread Tile并行优化    
+| 6: Register cache SMEM    ：使用寄存器缓存共享内存     
+| 7: Vectorized Mem Access  ：FLOAT4向量访存            
+| 8: Autotuning             ：自动调整                  
+| 9: Double buffering       ：双缓存                    
+| 10: Warptiling            ：warp分块                   
 
 # 配置
 
