@@ -2,20 +2,22 @@
 # 概述
 
 面向NVIDIA GPU，使用CUDA编程逐步优化矩阵乘法运算性能：
+| Kernel | 描述 | GFLOPs/s | Performance relative to cuBLAS |
+| --- | --- | --- | --- |
+| 0: cuBLAS | 官方库函数 | 14220.4 | 100% |
+| 1: Naive | 朴素实现 | 2267.0 | 15.9% |
+| 2: GMEM Coalescing | 全局内存合并 | 2270.7 | 16.0% |
+| 3: SMEM Caching | 共享内存缓存 | 4247.5 | 29.9% |
+| 4: 1D Blocktiling | 一维Thread Tile并行优化 | 8415.0 | 59.1% |
+| 5: 2D Blocktiling | 二维Thread Tile并行优化 | 11629.7 | 81.9% |
+| 6: Register cache SMEM | 使用寄存器缓存共享内存 | 11617.8 | 81.7% |
+| 7: Vectorized Mem Access | FLOAT4向量访存 | 12638.8 | 88.2% |
+| 8: Autotuning | 自动调整 | 13519.7 | 93.9% |
+| 9:Double buffering | 双缓存 | 13696.8 | 96.3% |
+| 10: Warptiling | warp分块 | 12142.5 | 85.4% |
 
-| Kernel                                         
-| 0: cuBLAS                 ：官方库函数                 
-| 1: Naive                  ：朴素实现                   
-| 2: GMEM Coalescing        ：全局内存合并               
-| 3: SMEM Caching           ：共享内存缓存               
-| 4: 1D Blocktiling         ：一维Thread Tile并行优化   
-| 5: 2D Blocktiling         ：二维Thread Tile并行优化    
-| 6: Register cache SMEM    ：使用寄存器缓存共享内存     
-| 7: Vectorized Mem Access  ：FLOAT4向量访存            
-| 8: Autotuning             ：自动调整                  
-| 9: Double buffering       ：双缓存                    
-| 10: Warptiling            ：warp分块                   
-
+> NVIDIA V100，矩阵尺寸4096
+> 
 # 配置
 
 - NVIDIA CUDA version: `CUDA 11.8`；
