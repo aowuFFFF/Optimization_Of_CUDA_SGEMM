@@ -1,7 +1,13 @@
 
 # 概述
 
-面向NVIDIA GPU，使用CUDA编程逐步优化矩阵乘法运算性能：
+面向NVIDIA GPU，使用CUDA编程逐步优化矩阵乘法
+【内容参考链接：】
+1、https://siboehm.com/articles/22/CUDA-MMM
+2、https://github.com/siboehm/SGEMM_CUDA
+3、https://github.com/wangzyon/NVIDIA_SGEMM_PRACTICE
+
+运算性能：
 | Kernel | 描述 | GFLOPs/s | Performance relative to cuBLAS |
 | --- | --- | --- | --- |
 | 0: cuBLAS | 官方库函数 | 14220.4 | 100% |
