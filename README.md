@@ -3,14 +3,6 @@
 
 面向NVIDIA GPU，使用CUDA编程逐步优化矩阵乘法
 
-【内容参考链接：】
-
-1、https://siboehm.com/articles/22/CUDA-MMM
-
-2、https://github.com/siboehm/SGEMM_CUDA
-
-3、https://github.com/wangzyon/NVIDIA_SGEMM_PRACTICE
-
 运算性能：
 | Kernel | 描述 | GFLOPs/s | Performance relative to cuBLAS |
 | --- | --- | --- | --- |
@@ -80,3 +72,12 @@ NVIDIA_SGEMM_PRACTICE                                   # 根目录
 > `./kernel_9_autotuner_x.sh`表示输出所有合理的参数组合及 指定的矩阵大小 其性能结果，具体使用方法见文件注释；
 
 > `./kernel_8_autotuner_plot.py`绘制指定的矩阵大小Autotuning结果图，并输出最大性能的参数组合，具体使用方法见文件注释；
+
+
+# 参考链接
+
+1、https://siboehm.com/articles/22/CUDA-MMM
+
+2、https://github.com/siboehm/SGEMM_CUDA
+
+3、https://github.com/wangzyon/NVIDIA_SGEMM_PRACTICE
