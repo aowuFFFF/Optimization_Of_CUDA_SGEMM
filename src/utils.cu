@@ -136,6 +136,7 @@ void test_mysgemm_v3(int M, int N, int K, float alpha, float *A, float *B, float
 }
 
 void test_mysgemm_v4(int M, int N, int K, float alpha, float *A, float *B, float beta, float *C) {
+    // thread_num * TM  = BM * BN ;
     dim3 blockDim(512);
     dim3 gridDim(CEIL_DIV(M, 64), CEIL_DIV(N, 64));
     mysgemm_v4<64, 64, 8, 8><<<gridDim, blockDim>>>(M, N, K, alpha, A, B, beta, C);
