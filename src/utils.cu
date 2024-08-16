@@ -151,6 +151,7 @@ void test_mysgemm_v5(int M, int N, int K, float alpha, float *A, float *B, float
 void test_mysgemm_v6(int M, int N, int K, float alpha, float *A, float *B, float beta, float *C) {
     dim3 blockDim(256);
     dim3 gridDim(CEIL_DIV(M, 128), CEIL_DIV(N, 128));
+    // block_thread_num * TM * TN  = BM *BN
     mysgemm_v6<128, 128, 8, 8, 8><<<gridDim, blockDim>>>(M, N, K, alpha, A, B, beta, C);
 }
 
