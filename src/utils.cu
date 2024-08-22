@@ -128,13 +128,13 @@ void test_mysgemm_v1(int M, int N, int K, float alpha, float *A, float *B, float
 //     // int b = CEIL_DIV(N, 16);
 //     dim3 blockDim(CEIL_DIV(M, 16*4),CEIL_DIV(M, 16*4));
 //     dim3 gridDim(4,4);
-//     mysgemm_v1<16><<<gridDim, blockDim>>>(M, N, K, alpha, A, B, beta, C);
+//     mysgemm_v1_2Dtile<16><<<gridDim, blockDim>>>(M, N, K, alpha, A, B, beta, C);
 // }
 
 void test_mysgemm_v2(int M, int N, int K, float alpha, float *A, float *B, float beta, float *C) {
     dim3 blockDim(32,32);
     dim3 gridDim(CEIL_DIV(M, 32), CEIL_DIV(N, 32));
-    mysgemm_v2<<<gridDim, blockDim>>>(M, N, K, alpha, A, B, beta, C);
+    mysgemm_v1_2Dtile<<<gridDim, blockDim>>>(M, N, K, alpha, A, B, beta, C);
 }
 
 // void test_mysgemm_v2_2Dtile(int M, int N, int K, float alpha, float *A, float *B, float beta, float *C) {
