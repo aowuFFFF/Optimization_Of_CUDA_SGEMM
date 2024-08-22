@@ -7,7 +7,7 @@
 #include <stdlib.h>
 
 template<const int tile_width>
-__global__ void mysgemm_v1_2Dtile(int M, int N, int K, float alpha, float *A, float *B, float beta, float *C) {
+__global__ void mysgemm_v2_2Dtile(int M, int N, int K, float alpha, float *A, float *B, float beta, float *C) {
 
   int start_row = (blockDim.y*blockIdx.y + threadIdx.y)*tile_width;
   int start_col = (blockDim.x*blockIdx.x + threadIdx.x)*tile_width;
