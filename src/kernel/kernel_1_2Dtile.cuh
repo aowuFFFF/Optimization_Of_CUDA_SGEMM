@@ -19,7 +19,7 @@ int thread_num = BM * BN / TM; // 一个线程负责block中计算TM个元素
 */
 
 template<const int tile_width>
-__global__ void mysgemm_v1(int M, int N, int K, float alpha, float *A, float *B, float beta, float *C) {
+__global__ void mysgemm_v1_2Dtile(int M, int N, int K, float alpha, float *A, float *B, float beta, float *C) {
 
   int start_col = (blockDim.y*blockIdx.y + threadIdx.y)*tile_width;
   int start_row = (blockDim.x*blockIdx.x + threadIdx.x)*tile_width;
