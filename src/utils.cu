@@ -140,7 +140,7 @@ void test_mysgemm_v2(int M, int N, int K, float alpha, float *A, float *B, float
 // void test_mysgemm_v2_2Dtile(int M, int N, int K, float alpha, float *A, float *B, float beta, float *C) {
 //     dim3 blockDim(CEIL_DIV(M, 16*4),CEIL_DIV(M, 16*4));
 //     dim3 gridDim(4,4);
-//     mysgemm_v2<16><<<gridDim, blockDim>>>(M, N, K, alpha, A, B, beta, C);
+//     mysgemm_v2_2Dtile<16><<<gridDim, blockDim>>>(M, N, K, alpha, A, B, beta, C);
 // }
 
 
