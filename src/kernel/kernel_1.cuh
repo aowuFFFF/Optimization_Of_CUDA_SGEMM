@@ -21,7 +21,7 @@ mysgemm_v1(int M, int N, int K, float alpha, float *A, float *B, float beta, flo
 
     float tmp = 0.;
     for (int i = 0; i < K; i++) {
-        tmp += A[gy * K + i] * B[i * N + gx]; // 两次全局内存访问和一次FMA（累加乘）
+        tmp += A[gx * K + i] * B[i * N + gy]; // 两次全局内存访问和一次FMA（累加乘）
     }
-    C[gy * N + gx] = alpha * tmp + beta * C[gy * N + gx];
+    C[gx * N + gy] = alpha * tmp + beta * C[gx * N + gy];
 }
