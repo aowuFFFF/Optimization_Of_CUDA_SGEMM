@@ -7,7 +7,7 @@
 | Kernel | 描述 | GFLOPs/s | Performance relative to cuBLAS |
 | --- | --- | --- | --- |
 | 0: cuBLAS | 官方库函数 | 14220.4 | 100% |
-| 1: Naive | 朴素实现 | 2267.0 | 15.9% |
+| 1: Naive | 朴素实现 | 26.1 | 1.5% |
 | 2: GMEM Coalescing | 全局内存合并 | 2270.7 | 16.0% |
 | 3: SMEM Caching | 共享内存缓存 | 4247.5 | 29.9% |
 | 4: 1D Blocktiling | 一维Thread Tile并行优化 | 8415.0 | 59.1% |
